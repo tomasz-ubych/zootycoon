@@ -1,0 +1,26 @@
+
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th  scope="col">Email </th>
+        <th scope="col">  </th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="owner in owners.content">
+      <tr>
+        <td>{{owner.id}}</td>
+        <td>{{owner.firstName}}</td>
+        <td>{{owner.lastName}}</td>
+        <td>{{owner.email}}</td>
+        <td><button data-ng-click="deleteOwner(owner.id)">delete</button> </td>
+      </tr>
+    </tbody>
+  </table>
+
+<!--     Email:<br>  
+  <input type="text" name="d" ng-model ="animal.email"><br>
+  <br> -->

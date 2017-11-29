@@ -1,0 +1,23 @@
+
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th  scope="col">Owners name </th>
+        <th scope="col"> Details </th>
+        <th scope="col">  </th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="animal in animals.content">
+      <tr>
+        <td>{{animal.name}}</td>
+        <td>{{animal.type}}</td>
+        <td>{{animal.ownerEntity.firstName}} {{animal.ownerEntity.lastName}}</td>
+        <td><button data-ng-click="loadView2(animal.id)"> go to </button></td>
+        <td><button data-ng-click="deleteAnimal(animal.id)"> delete </button>
+      </tr>
+    </tbody>
+  </table>
+

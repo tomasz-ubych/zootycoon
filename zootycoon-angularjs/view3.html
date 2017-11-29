@@ -1,0 +1,17 @@
+<form id="saveAnimalForm">
+  Name:<br>
+  <input type="text" name = "name" ng-model="animal.name"><br>
+  Type:<br>
+  <input type="text" name="type" ng-model="animal.type"><br>
+  Comments:<br>	
+   <input type="text" name="comments" ng-model ="animal.comments"><br>
+  Date:<br>
+  <input type="date" name="date" ng-model ="animal.dateOfBirth"><br>
+  Animal's owner:<br>
+  <select ng-model="number" ng-options="owner.id as owner.lastName + ' ' + owner.firstName for owner in owners.content | orderBy:'lastName'">
+<option value="">Please select an option</option>
+</select>
+</br>
+<input type="button" value="add" ng-click="saveAnimal(number)" />
+</form>
+<p>{{animal}}</p>

@@ -1,0 +1,22 @@
+<form id="saveOwnerForm" name="saveOwnerForm" novalidate  ng-submit="saveOwner()">
+  First name:<br>
+  <input type="text" name ="firstName" ng-model="owner.firstName" ng-required="true" ng-minlength="2" >
+  <span class="error-message" ng-show="saveOwnerForm.firstName.$dirty && saveOwnerForm.firstName.$error.required">The first name is mandatory!
+</span>
+<span class="error-message" ng-show="saveOwnerForm.firstName.$dirty && saveOwnerForm.firstName.$error.minlength">The first name should be minimum 2 characters!</span></br>	
+
+	Last name: </br>
+  <input type="text" name="lastName" ng-minlength="4" ng-maxlength="15" required ng-model="owner.lastName">
+   <span class="error-message" ng-show="saveOwnerForm.lastName.$dirty && saveOwnerForm.lastName.$error.required">The last name is mandatory!
+</span>
+<span class="error-message" ng-show="saveOwnerForm.lastName.$dirty && saveOwnerForm.lastName.$error.minlength">The last name should be minimum 4 characters!</span>
+<span class="error-message" ng-show="saveOwnerForm.lastName.$dirty && saveOwnerForm.lastName.$error.maxlength">The last name should be maximum 15 characters!</span><br>	
+  Email:<br>	
+  <input type="email" name="ownerEmail" ng-model ="owner.email" ng-required="true" />
+   <span class="error-message" ng-show="saveOwnerForm.ownerEmail.$dirty && saveOwnerForm.ownerEmail.$error.required">The email is mandatory!
+</span>
+<span class="error-message" ng-show="saveOwnerForm.ownerEmail.$dirty && saveOwnerForm.ownerEmail.$error.email">Not valid email</span></br>
+  <br>
+	  <input type="submit" id="submit" value="Submit" />
+</form>
+<p>{{owner}}</p>
